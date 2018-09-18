@@ -1,9 +1,19 @@
 <template name="task">
+
         <li class="{{#if checked}}checked{{/if}}">
-          <button class="delete">&times;</button>
+    
+          <button class="update">Update</button>
        
           <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
        
-          <span class="text">{{text}}</span>
+          <span class="text">{{firstname}} {{lastname}} {{gender}} {{dob}}</span>
+
         </li>
+        
       </template>
+
+
+      
+            
+            
+            

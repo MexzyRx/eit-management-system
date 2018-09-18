@@ -2,6 +2,7 @@ import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
 import { Tasks } from '../api/tasks.js';
  
+import './task.js';
 import './body.html';
  
 Template.body.helpers({
@@ -12,7 +13,7 @@ Template.body.helpers({
 
 Template.body.events({
   'submit .new-task'(event) {
-    console.log('Go EFF yourself')
+    
     // Prevent default browser form submit
     // event.preventDefault();
  
