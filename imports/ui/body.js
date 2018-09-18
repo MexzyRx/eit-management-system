@@ -23,8 +23,14 @@ Template.body.events({
     const lastname = target.lastname.value;
     const gender = target.gender.value;
     const dob = target.dob.value;
- 
-    Meteor.call('tasks.insert', firstname, lastname, gender, dob);
+    const id = target.id.value;
+
+    if (id){
+      Meteor.call('tasks.update', firstname, lastname, gender, dob, id);
+    } else{
+      Meteor.call('tasks.insert', firstname, lastname, gender, dob);
+    }
+    
 
  
     // Clear form
@@ -32,5 +38,6 @@ Template.body.events({
     target.lastname.value = '';
     target.gender.value = '';
     target.dob.value = '';
+    target.id.value = '';
   },
 });

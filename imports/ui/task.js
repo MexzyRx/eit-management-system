@@ -11,7 +11,10 @@ Template.task.events({
     form.lastname.value= this.lastname;
     form.gender.value= this.gender;
     form.dob.value= this.dob;
+    form.id.value= this._id;
     // Meteor.call('tasks.remove', this._id)
   },
+
+  
   
 });

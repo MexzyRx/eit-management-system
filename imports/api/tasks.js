@@ -34,4 +34,9 @@ Meteor.methods({
  
     Tasks.update(taskId, { $set: { checked: setChecked } });
   },
+
+  'tasks.update'(firstname, lastname, gender, dob, id){
+    Tasks.update(id, { $set: { firstname: firstname, lastname:lastname, gender:gender, dob:dob } });
+
+  },
 });
