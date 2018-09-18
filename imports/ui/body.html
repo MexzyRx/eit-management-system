@@ -59,10 +59,22 @@
     </div>
   </div>
 </form>
-
-  <ul>
+  <table>
+    <thead>
+      <th></th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Gender</th>
+      <th>Dob</th>
+      <th></th>
+    </thead>
     {{#each tasks}} {{> task}} {{/each}}
-  </ul>
+  </table>
+  <!-- <ul>
+    {{#each tasks}} {{> task}} {{/each}}
+  </ul> -->
+
+  <button id="delete">Delete</button>
 </body>
 
 

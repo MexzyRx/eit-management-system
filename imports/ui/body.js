@@ -4,6 +4,8 @@ import { Tasks } from '../api/tasks.js';
  
 import './task.js';
 import './body.html';
+
+var checkedArray = [];
  
 Template.body.helpers({
   tasks() {
@@ -40,4 +42,21 @@ Template.body.events({
     target.dob.value = '';
     target.id.value = '';
   },
+
+  'click .delete-multiple'(event){
+    var id = event.target.value;
+    if(event.target.checked){
+      checkedArray.push(id);
+    }else{
+      checkedArray.splice(checkedArray.indexOf(id), 1);
+    }
+
+  },
+
+  'click #delete'(event){
+    for (var i =0; i<checkedArray.length; i++ ){
+      id = checkedArray[i];
+      Meteor.call('multiple.remove', id);
+    }
+  }
 });

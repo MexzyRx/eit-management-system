@@ -39,4 +39,8 @@ Meteor.methods({
     Tasks.update(id, { $set: { firstname: firstname, lastname:lastname, gender:gender, dob:dob } });
 
   },
+
+  'multiple.remove' (id){
+      Tasks.remove(id);
+  },
 });

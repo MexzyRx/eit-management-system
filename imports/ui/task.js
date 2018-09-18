@@ -15,6 +15,4 @@ Template.task.events({
     // Meteor.call('tasks.remove', this._id)
   },
 
-  
-  
 });
