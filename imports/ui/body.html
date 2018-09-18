@@ -1,8 +1,73 @@
 <head>
   <title>EIT System</title>
+
 </head>
 <body>
-  <h1>Hello, world!</h1>
+  
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">EIT Management System</a>
+    </div>
+  </div>
+</nav>
+{{> loginButtons}}
+<form class="new-task">
+  <div class="form-group row">
+    <label for="inputName" class="col-sm-2 col-form-label">First Name</label>
+    <div class="col-sm-10">
+      <input type="name" name="firstname" class="form-control" id="inputFirst" placeholder="First Name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputName"  class="col-sm-2 col-form-label">Last Name</label>
+    <div class="col-sm-10">
+      <input type="name" name="lastname" class="form-control" id="inputLast" placeholder="Last Name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputDate" class="col-sm-2 col-form-label">DOB</label>
+    <div class="col-sm-10">
+      <input type="date" name="dob" class="form-control" id="inputDate" placeholder="Date of Birth">
+    </div>
+  </div>
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="Male" checked>
+          <label class="form-check-label" for="gridRadios1">
+            Male
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="Female">
+          <label class="form-check-label" for="gridRadios2">
+            Female
+          </label>
+        </div>
+        
+      </div>
+    </div>
+  </fieldset>
+  
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <input type="submit" class="btn btn-primary submit" placeholder="Submit">
+    </div>
+  </div>
+</form>
+
+  <ul>
+    {{#each tasks}} {{> task}} {{/each}}
+  </ul>
 </body>
+
+<template name="task">
+<li>
+  <span class="text">{{firstname}} {{lastname}} {{gender}} {{dob}}</span>
+</li>
+</template>
 
 
