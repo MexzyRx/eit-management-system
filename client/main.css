@@ -51,12 +51,15 @@ form {
  
 .new-task input {
   box-sizing: border-box;
-  padding: 10px 0;
+  /* padding: 10px 0; */
   background: transparent;
-  border: none;
+  /* border: none; */
   width: 100%;
   padding-right: 80px;
   font-size: 1em;
+  border: 1px solid #404040;
+  border-radius: none;
+  padding: 15px 20px;
 }
  
 .new-task input:focus{
@@ -159,6 +162,10 @@ header .hide-completed {
     margin: auto;
     padding: 2em;
 }
+
+.container{
+  background-color: transparent;
+}
 .description h1{
  color:#F97300 ;
 }
@@ -193,7 +200,35 @@ header .hide-completed {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4CAF50;
+  background-color: #9C27B0;
   color: white;
 }
 
+#divider{
+  height:40px;
+}
+
+.navbar-fixed-top {
+  border:0;
+}
+
+button {
+  background-color: #F97300;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.submit{
+  background-color: #F97300;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
